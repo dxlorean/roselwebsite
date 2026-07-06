@@ -22,4 +22,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script: "cd projects/[project name] && ./.scripts/deploy.sh"
+          script: "cd projects/Rosel && ./.scripts/deploy.sh"
