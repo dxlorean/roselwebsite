@@ -19,7 +19,7 @@ import { useState, useContext } from "react"
 import Lenis from 'lenis'
 
 
-import { Link, Route, Routes, useLocation } from 'react-router-dom'
+import { Link, Route, Routes, useLocation, Navigate } from 'react-router-dom'
 import About from "./components/AboutPage"
 import Shop from "./components/Shop"
 import ThankYou from "./components/Thankyou"
@@ -120,7 +120,8 @@ function App() {
 
 
     <Routes>
-       <Route path="/" element={<Navigate to="/home" replace />} /> 
+      
+      <Route path="/" element={<Navigate to="/home" replace />} />
       <Route path="/home" element={
         <div>
           <Hero toggleDrawer={toggleDrawer} />
