@@ -49,7 +49,7 @@ export default function PanierDrawer(
             quantity: element.quantity
         }));
 
-        fetch('http://localhost:3000/create-checkout-session', {
+        fetch('/create-checkout-session', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
