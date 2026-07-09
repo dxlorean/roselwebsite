@@ -25,7 +25,7 @@ import Shop from "./components/Shop"
 import ThankYou from "./components/Thankyou"
 
 
-// stupid comment7
+// stupid comment8
 function App() {
 
  
