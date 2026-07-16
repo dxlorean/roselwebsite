@@ -23,7 +23,7 @@ export default function Soins({toggleDrawer}) {
 
             <div className="relative w-full max-w-7xl mx-auto flex flex-col z-10 px-5 pt-14   lg:px-8">
                 <div id="treatments" className='scroll-mt-[110px]' >
-                    <h1 className='motion-preset-slide-up motion-duration-2000 motion-delay-300 text-3xl sm:text-2xl md:text-4xl lg:text-5xl text-red-800/90 [text-shadow:_0_10px_30px_rgba(131,24,67,0.4)] 
+                    <h1 className='motion-preset-slide-up motion-duration-2000 motion-delay-300 text-3xl sm:text-2xl md:text-4xl lg:text-5xl text-red-800/90  
                                   z-0 pointer-events-none [-webkit-text-stroke:0.4px_#d4af37]  leading-relaxed max-w-5xl mx-auto font-bold text-center font-serif'>
                         EHPAD & Residences Seniors
                     </h1>

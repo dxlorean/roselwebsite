@@ -25,14 +25,14 @@ export default function Features() {
                 
 
                 <div id="shop"  className='scroll-mt-[80px] text-center flex flex-col items-center pt-7 pb-7 md:pt-10  lg:pt-15 lg:pb-15 '>
-                    <h1 className='motion-preset-slide-up motion-duration-2000 motion-delay-300 text-3xl sm:text-2xl md:text-4xl lg:text-5xl text-red-800/90 [text-shadow:_0_10px_30px_rgba(131,24,67,0.4)] 
+                    <h1 className='motion-preset-slide-up motion-duration-2000 motion-delay-300 text-3xl sm:text-2xl md:text-4xl lg:text-5xl text-red-800/90  
                                   z-0 pointer-events-none [-webkit-text-stroke:0.4px_#d4af37]  leading-relaxed max-w-3xl mx-auto font-bold text-center font-serif'>
                         La Boutique
                     </h1>
                 </div>
                 <div  className=' text-center flex flex-col items-center  pb-7  md:pb-5  lg:pb-8 '>
                     <img
-                        src="/product_trio2.png"
+                        src="/product_5.png"
                         alt=""
                         className="transition-transform duration-500 ease-in-out hover:scale-102 max-w-[350px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain z-20"
                     />

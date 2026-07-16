@@ -91,14 +91,15 @@ export default function AnchorTemporaryDrawer(
         const formData = Object.fromEntries(new FormData(e.currentTarget));
         console.log("Form submitted:", formData);
         if (devis_state) {
-            
+
 
             console.log("Send devis")
             const formData = new FormData(e.target);
             const selectedActivities = formData.getAll("activities");
-            const formattedActivities = selectedActivities.length > 0
-                ? selectedActivities.join(",\n ")
-                : "Aucune prestation sélectionnée"; 
+            const formattedActivities = selectedService == 'abo' ? 'ABONNEMENT' :
+                selectedActivities.length > 0
+                    ? selectedActivities.join(",\n ")
+                    : "Aucune prestation sélectionnée";
 
             emailjs.send(service_id, template_id, {
                 activities: formattedActivities,
@@ -111,10 +112,10 @@ export default function AnchorTemporaryDrawer(
             }, pubkey)
                 .then((result) => {
                     console.log(result.text);
-                   // alert('Message Sent Successfully')
+                    // alert('Message Sent Successfully')
                 }, (error) => {
                     console.log(error.text);
-                   // alert('Something went wrong!')
+                    // alert('Something went wrong!')
                 });
             e.target.reset()
             setStep(4);
@@ -124,14 +125,15 @@ export default function AnchorTemporaryDrawer(
         }
     };
 
-   
-    
+
+
 
     const SERVICE_LABELS = {
         massage: "Massage Relaxation (30 min)",
         drainage: "Drainage Lymphatique (45 min)",
         madero: "Madérothérapie (45 min)",
         forfait: "Forfait Bien-Être (5 séances)",
+        abo: "Abonnement",
         devis: "Devis Événement & Entreprise",
         ehpad: "EHPAD & Residences Seniors",
         cse: "Entreprises & CSE"
@@ -211,6 +213,8 @@ export default function AnchorTemporaryDrawer(
                                             <ImgCard onSelect={(service) => {
                                                 selectService(service)
                                             }} type="drainage" img="traitement_drainage.png" title="Drainage Lymphatique (45 min) — 130 €" />
+
+
                                             <ImgCard onSelect={(service) => {
                                                 selectService(service)
                                             }} type="madero" img="maderotherapy.png" title="Madérothérapie (45 min) — 130 €" />
@@ -232,6 +236,32 @@ export default function AnchorTemporaryDrawer(
                                                         Cure complète de <span className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent font-bold drop-shadow-sm">
                                                             5 séances au choix
                                                         </span>{" "} (Drainage lymphatique <span className="font-bold">OU</span> Madérothérapie). Un accompagnement idéal pour des résultats durables sur votre silhouette et un bien-être profond.
+                                                    </ImgCard>
+                                                </div>
+                                            </div>
+
+                                            <div className="relative mt-8 max-w-[400px] w-full mx-auto p-[3px] rounded-[18px] bg-gradient-to-r from-red-300 via-red-500 to-red-300 transition-transform hover:-translate-y-1">
+
+                                                {/* Badge Flottant */}
+                                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-950 text-red-400 font-bold tracking-widest uppercase text-xs px-5 py-1.5 rounded-full z-10 shadow-md flex items-center gap-2 whitespace-nowrap">
+                                                    <Sparkles className="w-4 h-4" />
+                                                    Offre fidélité
+                                                </div>
+
+                                                {/* Removed flex-1 so it wraps tightly around the ImgCard */}
+                                                <div className="rounded-[15px] overflow-hidden bg-white">
+                                                    <ImgCard
+                                                        title="Abonnements"
+                                                        onSelect={(service) => {
+                                                            selectService(service)
+                                                            setDevisState(true)
+                                                        }}
+                                                        type='abo'
+                                                    >
+                                                        Abonnements annuels <span className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent font-bold drop-shadow-sm">
+                                                            sur-mesure
+                                                        </span>{" "}
+                                                        (Interventions régulières <span className="font-bold">OU</span> soins à la carte). Un accompagnement idéal pour garantir un bien-être continu tout au long de l'année, adapté à vos besoins spécifiques. <br /><br /><span className="font-bold text-gray-800">Tarif sur devis.</span>
                                                     </ImgCard>
                                                 </div>
                                             </div>
@@ -321,7 +351,7 @@ export default function AnchorTemporaryDrawer(
                                         </div>}
 
                                     {/* B2B */}
-                                    {devis_state &&
+                                    {devis_state && selectedService != 'abo' &&
 
                                         <div>
 
@@ -400,14 +430,14 @@ export default function AnchorTemporaryDrawer(
 
                                     }
                                     {/* Message Field */}
-                                    <TextField name="message" isRequired={devis_state} className="flex flex-col w-full">
+                                    <TextField name="message" isRequired={devis_state || selectedService == 'abo'} className="flex flex-col w-full">
                                         <Label className="block text-sm font-semibold tracking-wide text-emerald-950 mb-2">
-                                            {devis_state ? "Détails de l'événement" : "Conditions spécifiques (Optionnel)"}
+                                            {selectedService == 'abo' ? 'Services' : (devis_state ? "Détails de l'événement" : "Conditions spécifiques (Optionnel)")}
                                         </Label>
                                         <TextArea
                                             rows={12}
                                             className="w-full border-b-2 border-stone-200 bg-stone-50/50 px-4 py-3 text-emerald-950 placeholder-stone-400 focus:bg-white focus:border-amber-500 focus:outline-none transition-all duration-300 resize-none rounded-t-md data-[invalid]:border-red-500"
-                                            placeholder={devis_state ? "Décrivez la date souhaitée, le lieu, et vos attentes particulières..." : "Avez-vous des zones de tension, allergies, grossesse..."}
+                                            placeholder={selectedService == 'abo' ? 'Soins souhaitees, frequence..' : (devis_state ? "Décrivez la date souhaitée, le lieu, et vos attentes particulières..." : "Avez-vous des zones de tension, allergies, grossesse...")}
                                         />
                                         <FieldError className="text-red-500 text-sm mt-1" />
                                     </TextField>

@@ -11,7 +11,7 @@ export default function Shop({ toggleDrawer }) {
 
     const productInfo = {
         'HibiscusCassis': {
-            id: 1, title: "Thé Cassis", price: 25, thumbnail: "public/product_5.png"
+            id: 1, title: "Thé Cassis", price: 25, thumbnail: "/product_5.png"
         }
     }
 
@@ -157,92 +157,7 @@ export default function Shop({ toggleDrawer }) {
                     </div>
 
 
-                    {/* --- LEFT: The Square Card --- */}
-                    <div className="w-full aspect-square">
-                        <ImgCard
-                            img="/product_5.png"
-                            title="Thé infusion Cassis Hibiscus"
-                            className="w-full h-full flex flex-col"
-                            onSelect={() => {
-
-
-                                addToCart(productInfo['HibiscusCassis']);
-
-                                toggleDrawer(true);
-                            }}
-                        >
-                            {/* Button Container */}
-                            <div className="mt-auto pt-4 w-full">
-                                <Button
-                                    variant="contained"
-                                    disableElevation
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-
-                                        addToCart(productInfo['HibiscusCassis']);
-
-                                        toggleDrawer(true);
-                                    }}
-                                    sx={{
-                                        width: '100%',
-                                        backgroundColor: '#022c22', // Emerald-950
-                                        color: '#fef3c7',
-                                        borderRadius: '4px',
-                                        padding: '14px 20px',
-                                        textTransform: 'none',
-                                        fontFamily: 'sans-serif',
-                                        fontStyle: 'normal',
-                                        fontSize: '1.25rem',
-                                        fontWeight: 600,
-                                        letterSpacing: '0.02em',
-                                        transition: 'all 0.3s ease',
-                                        border: '1px solid #022c22',
-                                        '&:hover': {
-                                            backgroundColor: 'transparent',
-                                            color: '#022c22',
-                                        }
-                                    }}
-                                >
-                                    Ajouter au panier — 25 €
-                                </Button>
-                            </div>
-                        </ImgCard>
-                    </div>
-
-                    {/* --- RIGHT: Seamless Text Frame --- */}
-                    {/* Grid automatically stretches this div to match the height of the image on the left! */}
-                    {/* Removed bg-white, border, and shadow. Added light padding for mobile. */}
-                    <div className="w-full h-full flex flex-col justify-center px-4 md:px-0 md:py-0">
-
-                        {/* Sleek Subtitle/Category above the main title */}
-                        <span className=" italic text-sm font-semibold tracking-widest uppercase text-emerald-700/80 mb-2">
-                            Signature
-                        </span>
-
-                        <h3 className="text-3xl lg:text-4xl font-serif text-emerald-950 font-bold mb-6">
-                            Infusion Cassis & Hibiscus
-                        </h3>
-
-                        <p className="text-emerald-950/80 text-lg lg:text-xl leading-relaxed mb-8">
-                            Une infusion audacieuse qui marie la puissance du cassis à l'acidulé rafraîchissant de l'hibiscus. Créée pour stimuler votre vitalité, cette synergie accompagne parfaitement vos séances de madérothérapie pour prolonger les effets détoxifiants.
-                        </p>
-
-                        {/* Minimalist Details without the bright orange stars */}
-                        <ul className="space-y-4 text-emerald-950 font-medium mt-auto">
-                            <li className="flex items-start gap-3">
-                                <span className="text-emerald-700/60 font-serif text-xl leading-none pt-1">✦</span>
-                                Action drainante & antioxydante
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-emerald-700/60 font-serif text-xl leading-none pt-1">✦</span>
-                                Ingrédients 100% naturels
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-emerald-700/60 font-serif text-xl leading-none pt-1">✦</span>
-                                Sachet kraft refermable de 100g
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </section>

@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-export default function ActionAreaCard({ type="null", children, title = "Card", img="/massagevector.webp", onSelect, ...rest }) {
+export default function ActionAreaCard({ type="null", children, title = "Card", img, onSelect, ...rest }) {
     return (
         <Card sx={{
             maxWidth: 400,
@@ -19,13 +19,13 @@ export default function ActionAreaCard({ type="null", children, title = "Card", 
             }
         }}>
             <CardActionArea onClick={() => onSelect(type)}>
-                <CardMedia
+                {img && <CardMedia
                     component="img"
                     height="140"
                     image={img}
                     alt=""
                     
-                />
+                />}
                 <CardContent>
                     <Typography
                         gutterBottom
