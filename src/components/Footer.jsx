@@ -15,21 +15,21 @@ export default function Footer() {
         {/* Center: Contact Links (Horizontal) */}
         <div className="flex items-center gap-4 text-xs text-stone-500">
           <a 
-            href="mailto:contact@rosel-paris.fr" 
+            href="mailto:rosel75.paris@gmail.com" 
             className="hover:text-emerald-700 transition-colors"
           >
-            contact@rosel-paris.fr
+            rosel75.paris@gmail.com
           </a>
           <span className="text-stone-300">|</span>
           <a 
-            href="tel:+33600000000" 
+            href="tel:+330629455919" 
             className="hover:text-emerald-700 transition-colors"
           >
-            +33 (0)6 00 00 00 00
+            +330629455919
           </a>
         </div>
 
-        {/* Right: Copyright & Icon */}
+        
         <div className="flex items-center gap-3">
           <span className="text-xs text-stone-400">
             © {new Date().getFullYear()}
