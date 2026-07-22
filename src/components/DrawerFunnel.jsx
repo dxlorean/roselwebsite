@@ -459,7 +459,7 @@ export default function AnchorTemporaryDrawer(
                     <AnimatePresence mode="wait">
                         {step === 3 && (
                             <motion.div
-                                key="step3" // React needs a unique key to track the animation lolzers edit
+                                key="step3" // React needs a unique key to track the animation lolzers edit2
                                 initial={{ opacity: 0, x: -20 }} // Starting state (In)
                                 animate={{ opacity: 1, x: 0 }}   // Resting state
                                 exit={{ opacity: 0, x: 20 }}     // Ending state (Out)
