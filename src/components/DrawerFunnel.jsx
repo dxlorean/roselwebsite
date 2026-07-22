@@ -126,7 +126,7 @@ export default function AnchorTemporaryDrawer(
     };
 
 
-
+//https://cal.eu/roselparis/30min
 
     const SERVICE_LABELS = {
         massage: "Massage Relaxation (30 min)",
@@ -137,6 +137,14 @@ export default function AnchorTemporaryDrawer(
         devis: "Devis Événement & Entreprise",
         ehpad: "EHPAD & Residences Seniors",
         cse: "Entreprises & CSE"
+    };
+
+    const SERVICE_LINKS = {
+        massage: "https://cal.eu/roselparis/30min",
+        drainage: "https://cal.eu/roselparis/drainage-lymphatique",
+        madero: "https://cal.eu/roselparis/maderotherapie",
+        forfait: "https://cal.eu/roselparis/forfait-5-seances",
+
     };
 
     const B2B_ACTIVITIES = {
@@ -463,7 +471,7 @@ export default function AnchorTemporaryDrawer(
                                         layout: "month_view"
                                     }}
 
-                                    calLink="https://cal.com/dxlorean-yqvper/30min"></Cal>
+                                    calLink={SERVICE_LINKS[selectedService]}></Cal>
                             </motion.div>
                         )}
 
