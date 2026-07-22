@@ -140,10 +140,10 @@ export default function AnchorTemporaryDrawer(
     };
 
     const SERVICE_LINKS = {
-        massage: "https://cal.eu/roselparis/30min",
-        drainage: "https://cal.eu/roselparis/drainage-lymphatique",
-        madero: "https://cal.eu/roselparis/maderotherapie",
-        forfait: "https://cal.eu/roselparis/forfait-5-seances",
+        massage: "roselparis/30min",
+        drainage: "roselparis/drainage-lymphatique",
+        madero: "roselparis/maderotherapie",
+        forfait: "roselparis/forfait-5-seances",
 
     };
 
@@ -470,7 +470,7 @@ export default function AnchorTemporaryDrawer(
                                     config={{
                                         layout: "month_view"
                                     }}
-
+                                    calOrigin="https://app.cal.eu"    
                                     calLink={SERVICE_LINKS[selectedService]}></Cal>
                             </motion.div>
                         )}
