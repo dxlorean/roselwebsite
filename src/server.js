@@ -44,23 +44,67 @@ app.post('/create-checkout-session', async (req, res) => {
       };
     });
 
-    // 2. Create the Checkout Session
+// 2. Create the Checkout Session
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'paypal'],
       line_items: lineItems,
       mode: 'payment',
       
-    
       shipping_address_collection: {
-        allowed_countries: ['FR', 'BE', 'CH'], // France, Belgium, Switzerland (modify as needed)
+        
+        allowed_countries: ['FR', 'BE', 'CH', 'LU', 'DE', 'IT', 'ES', 'NL', 'GB', 'US', 'CA'], 
       },
 
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: {
+              amount: 590, 
+              currency: 'eur',
+            },
+            display_name: 'Livraison Standard (France)',
+            delivery_estimate: {
+              minimum: { unit: 'business_day', value: 2 },
+              maximum: { unit: 'business_day', value: 4 },
+            },
+          },
+        },
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: {
+              amount: 1290, // 12.90 €
+              currency: 'eur',
+            },
+            display_name: 'Livraison Standard (Europe)',
+            delivery_estimate: {
+              minimum: { unit: 'business_day', value: 3 },
+              maximum: { unit: 'business_day', value: 7 },
+            },
+          },
+        },
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: {
+              amount: 2490, // 24.90 €
+              currency: 'eur',
+            },
+            display_name: 'Livraison Internationale',
+            delivery_estimate: {
+              minimum: { unit: 'business_day', value: 5 },
+              maximum: { unit: 'business_day', value: 15 },
+            },
+          },
+        },
+      ],
   
       success_url: `${req.headers.origin}/thankyou`,
       cancel_url: `${req.headers.origin}/home#home`, 
     });
 
-    // 3. Send the Stripe URL back to React
+   
     res.json({ url: session.url });
 
   } catch (error) {
