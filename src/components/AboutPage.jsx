@@ -13,9 +13,7 @@ export default function AboutSection() {
             {/* Main Container with a large vertical gap between the "story blocks" */}
             <div className="relative w-full max-w-7xl mx-auto flex flex-col space-y-20 md:space-y-32 z-10">
 
-                {/* =========================================
-                    BLOCK 1: Title + Intro (Text Left, Image Right)
-                ========================================= */}
+              
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div className="flex flex-col text-left space-y-6 order-2 lg:order-1">
                         
@@ -26,18 +24,30 @@ export default function AboutSection() {
                         </h2>
 
                         <p className="text-lg md:text-xl text-emerald-950/80 leading-relaxed font-serif">
-                            <span className="italic font-medium">Rosel Paris</span> est née d'une volonté d'accompagner chaque personne — particuliers, seniors, et professionnels — dans une démarche globale de mieux-être, de vitalité et d'amélioration de la qualité de vie.
+                            <span className="italic font-medium">Rosel Paris</span> est née d'une 
+                            conviction simple : le bien-être physique et mental nécessite un accompagnement rigoureux, 
+                            régulier et adapté au rythme de chacun. Notre mission est d'accompagner les particuliers, 
+                            les seniors et les professionnels dans une démarche globale 
+                            de vitalité et d'amélioration continue de la qualité de vie. <br></br> <br></br>
+                            Spécialisé dans les techniques manuelles ciblées — telles que le drainage lymphatique, 
+                            la madérothérapie et les massages profonds — 
+                            notre institut privilégie des méthodes aux résultats physiologiques concrets. 
+                            Notre approche ne se limite pas à une détente ponctuelle ; elle vise un soulagement réel des tensions, la relance du métabolisme et un entretien durable du corps.
+                            <br></br><br></br>
+                            Parce que chaque besoin est unique, notre accompagnement a été pensé pour être totalement flexible. Nous proposons des soins à la carte, des cures intensives pour des résultats profonds (forfaits), ainsi que des abonnements annuels sur-mesure. Cette adaptabilité nous permet d'intervenir avec la même exigence de discrétion et
+                             de professionnalisme auprès de notre clientèle privée, qu'au sein d'entreprises ou d'établissements spécialisés.
                         </p>
                     </div>
 
-                    {/* Placeholder Image 1 */}
+                   
                     <div className="flex justify-center order-1 lg:order-2">
-                        <div className="w-full max-w-[500px] aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                            <img
-                                src="/logo8.png" // 👈 Add a photo of Rosel talking with a client here
-                                alt="Rosel"
-                                className="w-full h-full object-cover"
-                            />
+                        <div className="w-full max-w-[600px] aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                            
+                           <video id="vid" className="object-cover h-full w-full rounded-lg" muted autoPlay loop>
+                                <source src="videoshowcase.mp4" type="video/mp4"></source>
+                                Your browser does not support the video tag.
+                            </video>
+
                         </div>
                     </div>
                 </div>
@@ -45,9 +55,9 @@ export default function AboutSection() {
                 {/* =========================================
                     BLOCK 2: The Double Competence (Image Left, Text Right)
                 ========================================= */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/**    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     
-                    {/* Placeholder Image 2 (Visually on the left on desktop) */}
+                    
                     <div className="flex justify-center order-1">
                         <div className="w-full max-w-[500px] aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                             <img
@@ -80,7 +90,7 @@ export default function AboutSection() {
                         </p>
                     </div>
 
-                    {/* Original Logo Image */}
+                   
                     <div className="flex justify-center lg:justify-end order-1 lg:order-2">
                         <img
                             src="/logo8.png"
@@ -88,7 +98,7 @@ export default function AboutSection() {
                             className="w-full max-w-[350px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain z-20 drop-shadow-xl"
                         />
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </section>

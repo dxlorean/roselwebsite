@@ -497,9 +497,9 @@ export default function AnchorTemporaryDrawer(
                                 <div className="flex flex-col  sm:flex-row gap-4 w-full justify-center mt-6">
 
                                     <h1 className="text-xl sm:text-2xl lg:text-3xl text-red-800/90 [text-shadow:_0_10px_30px_rgba(131,24,67,0.4)] z-0 pointer-events-none [-webkit-text-stroke:0.4px_#d4af37] leading-relaxed font-bold text-center font-serif">
-                                        Votre rendez vous est
-                                        <br></br> confirme! <br></br>
-                                        Merci
+                                        
+                                        Merci ! <br></br>
+                                        Nous allons traiter votre demande dans les plus brefs delais
 
 
                                     </h1>
