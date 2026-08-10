@@ -121,8 +121,8 @@ function App() {
 
     <Routes>
       
-      <Route path="/" element={<Navigate to="/home" replace />} />
-      <Route path="/home" element={
+      <Route path="/home" element={<Navigate to="/" replace />} />
+      <Route path="/" element={
         <div>
           <Hero toggleDrawer={toggleDrawer} />
           <Soins toggleDrawer={toggleDrawer} />
