@@ -75,29 +75,16 @@ export default function Shop({ toggleDrawer }) {
                             img="/product_5.png"
                             title="Thé infusion Cassis Hibiscus"
                             className="w-full h-full flex flex-col"
-                            onSelect={() => {
-
-
-                                addToCart(productInfo['HibiscusCassis']);
-
-                                toggleDrawer(true);
-                            }}
+                           
                         >
                             {/* Button Container */}
                             <div className="mt-auto pt-4 w-full">
                                 <Button
                                     variant="contained"
                                     disableElevation
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-
-                                        addToCart(productInfo['HibiscusCassis']);
-
-                                        toggleDrawer(true);
-                                    }}
                                     sx={{
                                         width: '100%',
-                                        backgroundColor: '#022c22', // Emerald-950
+                                        backgroundColor: '#DB7560', // Emerald-950
                                         color: '#fef3c7',
                                         borderRadius: '4px',
                                         padding: '14px 20px',
@@ -115,7 +102,7 @@ export default function Shop({ toggleDrawer }) {
                                         }
                                     }}
                                 >
-                                    Ajouter au panier — 25 €
+                                    Rupture de Stock
                                 </Button>
                             </div>
                         </ImgCard>

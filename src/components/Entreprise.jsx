@@ -7,7 +7,7 @@ import { Diamond } from "lucide-react";
 import { DrawCircleText } from "../components/DrawCircleText"
 export default function Soins({toggleDrawer}) {
     return (
-        <section className="relative px-6 lg:px-8 bg-amber-100 flex   pt-3 pb-0 md:pt-5 md:pb-5  items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8 bg-amber-50 flex   pt-3 pb-0 md:pt-5 md:pb-5  items-center  overflow-hidden">
 
             {/* The Top Separator Emblem */}
             <img

@@ -16,7 +16,7 @@ export default function Navbar({ toggleCart }) {
     return (
 
 
-        <nav className=" fixed top-0 w-full z-50 transition-all duration-300 bg-amber-50 backdrop-blur-sm">
+        <nav className=" fixed top-0 w-full z-50 transition-all duration-300 bg-amber-50 shadow-md">
             <div className="max-w-7xl mx-auto px-1 py-5 sm:px-3 sm:py-3 lg:px-5">
                 <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
                     <div className="flex items-center space-x-5 group cursor-pointer">

@@ -5,32 +5,29 @@ import { HeroActionBlock } from "./HeroAction";
 import Button from "@mui/material/Button";
 import { CalendarIcon, DeleteIcon, SendIcon } from "lucide-react";
 
-export default function Hero({toggleDrawer}) {
+export default function Hero({ toggleDrawer }) {
 
 
     return (
-        <section className="relative px-6 lg:px-8  bg-amber-50 flex   pt-3 pb-0 md:pt-5   items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8  bg-amber-50 flex   pt-3 pb-0 md:pt-10   items-center  overflow-hidden">
 
 
 
 
 
             <div id="home" className="relative w-full  max-w-7xl mx-auto flex flex-col z-10 px-5 pt-20 pb-20  lg:px-8">
-                <div className=' text-center flex flex-col items-center  md:pb-3   '>
-                    <img
-                        src="/logo8.png"
-                        alt=""
-                        className=" max-w-[350px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain z-20"
-                    />
 
+                <div className="flex justify-center pt-5">
+                    <div className="w-full aspect-[4/3] lg:aspect-[6/3]  rounded-2xl overflow-hidden   border-white">
+
+                        <video id="vid" className="object-cover h-full w-full rounded-lg" muted autoPlay loop>
+                            <source src="videoshowcase.mp4" type="video/mp4"></source>
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
                 </div>
 
-                <div  >
-                    <h1 className='italic text-xs md:text-sm lg:text-xl  text-gray-600/50  ] 
-                                  z-0 pointer-events-none   leading-relaxed max-w-7xl mx-auto font-bold text-center font-serif'>
-                       
-                    </h1>
-                </div>
 
                 <p className="pt-5 pb-5 md:pb-7 md:pt-7 motion-preset-slide-up motion-duration-2000 motion-delay-300 text-lg md:text-xl text-emerald-950/80 leading-relaxed max-w-7xl mx-auto text-center font-serif">
                     <span className="italic">Rosel</span> accompagne les particuliers, les seniors et les professionnels dans une démarche
@@ -49,6 +46,7 @@ export default function Hero({toggleDrawer}) {
                         Experte en Maderothérapie & Drainage
                     </span>{" "}   —, Rosel Paris conçoit des ateliers, animations et accompagnements favorisant l'équilibre, la prévention et le mieux-être au quotidien.
                 </p>
+
                 <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-5 mt-8 px-4">
 
                     {/* B2B Button : Devis (Outlined) */}
@@ -82,7 +80,7 @@ export default function Hero({toggleDrawer}) {
                         variant="contained"
                         endIcon={<CalendarIcon />}
                         className="w-full sm:w-[320px]"
-                         onClick={toggleDrawer(true, 1, false)}
+                        onClick={toggleDrawer(true, 1, false)}
                         sx={{
                             py: 1.5,
                             fontSize: '1rem',

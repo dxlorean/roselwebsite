@@ -220,12 +220,12 @@ export default function AnchorTemporaryDrawer(
                                             }} type="massage" img="massage.png" title="Massage Relaxation (30 min) — 60 €" />
                                             <ImgCard onSelect={(service) => {
                                                 selectService(service)
-                                            }} type="drainage" img="traitement_drainage.png" title="Drainage Lymphatique (45 min) — 130 €" />
+                                            }} type="drainage" img="traitement_drainage.png" title="Drainage Lymphatique (45 min) — 100 €" />
 
 
                                             <ImgCard onSelect={(service) => {
                                                 selectService(service)
-                                            }} type="madero" img="maderotherapy.png" title="Madérothérapie (45 min) — 130 €" />
+                                            }} type="madero" img="maderotherapy.png" title="Madérothérapie (45 min) — 100 €" />
                                             <div className="relative mt-2 max-w-[400px] mx-auto p-[3px] rounded-[18px] bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300 shadow-2xl shadow-amber-600/20 transition-transform hover:-translate-y-1">
                                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-950 text-amber-400 font-bold tracking-widest uppercase text-xs px-5 py-1.5 rounded-full z-10 shadow-md flex items-center gap-2 whitespace-nowrap">
                                                     <Sparkles className="w-4 h-4" /> {/* Make sure Sparkles is imported */}

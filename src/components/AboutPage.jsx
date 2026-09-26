@@ -8,22 +8,22 @@ import { CalendarIcon, DeleteIcon, SendIcon } from "lucide-react";
 export default function AboutSection() {
     return (
       
-        <section id="about" className="relative px-6 lg:px-8 bg-amber-50 pt-30 pb-16 md:pt-32 md:pb-24 overflow-hidden scroll-mt-[110px]">
+        <section id="about" className="relative px-6 lg:px-8   pt-30 pb-16 md:pt-32 md:pb-24 overflow-hidden scroll-mt-[110px]">
             
             {/* Main Container with a large vertical gap between the "story blocks" */}
-            <div className="relative w-full max-w-7xl mx-auto flex flex-col space-y-20 md:space-y-32 z-10">
+            <div className="relative pb-40 w-full pt-10 max-w-7xl mx-auto flex flex-col  space-y-20 md:space-y-32 z-10">
 
               
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div className="flex flex-col text-left space-y-6 order-2 lg:order-1">
+                <div className="flex flex-col gap-3 items-center">
+                   
                         
                         {/* Fixed the h1/h2 nesting issue! */}
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-red-800/90 [text-shadow:_0_10px_30px_rgba(131,24,67,0.4)] 
+                        <h2 className="text-3xl   sm:text-4xl md:text-5xl lg:text-5xl text-red-800/90 
                                      [-webkit-text-stroke:0.4px_#d4af37] leading-tight font-bold font-serif mb-4">
                             L'alliance de l'expertise santé et du bien-être
                         </h2>
 
-                        <p className="text-lg md:text-xl text-emerald-950/80 leading-relaxed font-serif">
+                        <p className="text-lg  md:text-xl text-emerald-950/80 leading-relaxed h-dvh font-serif">
                             <span className="italic font-medium">Rosel Paris</span> est née d'une 
                             conviction simple : le bien-être physique et mental nécessite un accompagnement rigoureux, 
                             régulier et adapté au rythme de chacun. Notre mission est d'accompagner les particuliers, 
@@ -40,16 +40,7 @@ export default function AboutSection() {
                     </div>
 
                    
-                    <div className="flex justify-center order-1 lg:order-2">
-                        <div className="w-full max-w-[600px] aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                            
-                           <video id="vid" className="object-cover h-full w-full rounded-lg" muted autoPlay loop>
-                                <source src="videoshowcase.mp4" type="video/mp4"></source>
-                                Your browser does not support the video tag.
-                            </video>
-
-                        </div>
-                    </div>
+                    
                 </div>
 
                 {/* =========================================
@@ -100,7 +91,7 @@ export default function AboutSection() {
                     </div>
                 </div> */}
 
-            </div>
+          
         </section>
     );
 }

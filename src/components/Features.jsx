@@ -9,7 +9,7 @@ export default function Features() {
   
 
     return (
-        <section className="relative px-6 lg:px-8 bg-amber-100 flex   pt-3 md:pt-7  items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8 bg-amber-50 flex   pt-3 md:pt-7  items-center  overflow-hidden">
 
             {/* The Top Separator Emblem */}
             <img

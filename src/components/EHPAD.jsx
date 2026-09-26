@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import { CalendarIcon, DeleteIcon, SendIcon } from "lucide-react";
 export default function Soins({toggleDrawer}) {
     return (
-        <section className="relative px-6 lg:px-8 bg-amber-100 flex   pt-3 pb-0 md:pt-5 md:pb-5  items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8 bg-amber-50 flex   pt-3 pb-0 md:pt-5 md:pb-5  items-center  overflow-hidden">
 
             {/* The Top Separator Emblem */}
             <img
@@ -70,14 +70,9 @@ export default function Soins({toggleDrawer}) {
                     />
 
                 </div>
-                <div className="relative mt-12 max-w-[450px] mx-auto p-[3px] rounded-[18px] bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300 shadow-2xl shadow-amber-600/20 transition-transform hover:-translate-y-1">
+                <div className="relative mt-12 max-w-[450px] mx-auto p-[3px] rounded-[18px] bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300  shadow-amber-600/20 transition-transform hover:-translate-y-1">
 
-                    {/* Badge Flottant "Avantage Réseau" */}
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-950 text-amber-400 font-bold tracking-widest uppercase text-xs px-5 py-1.5 rounded-full z-10 shadow-md flex items-center gap-2 whitespace-nowrap">
-                        <Sparkles className="w-4 h-4" />
-                        OFFRE PREMIUM
-                    </div>
-
+                   
                     {/* Conteneur de la carte */}
                     <div className="rounded-[15px] overflow-hidden bg-white">
                         <ImgCard
