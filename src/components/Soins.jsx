@@ -6,7 +6,7 @@ import { BienfaitsList } from './Bienfaits';
 import { PaypalLogoIcon } from "@phosphor-icons/react";
 export default function Soins({ toggleDrawer }) {
     return (
-        <section className="relative px-6 lg:px-8  bg-amber-50  flex   pt-6 sm:pt-6 md:pt-8    items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8  bg-white  flex   pt-6 sm:pt-6 md:pt-8    items-center  overflow-hidden">
 
 
             <img
@@ -43,7 +43,7 @@ export default function Soins({ toggleDrawer }) {
                         onSelect={toggleDrawer(true, 2, false, 'massage')} img="/massage.png" title="Massage Relaxation (30 min) — 60 €">Détente profonde, relâchement musculaire et réduction immédiate du stress. Une véritable bulle de lâcher-prise pour relâcher les tensions du quotidien.</ImgCard>
                     <ImgCard onSelect={toggleDrawer(true, 2, false, 'drainage')}
                         img="/traitement_drainage.png" title="Drainage Lymphatique (45 min) — 100 €">Le soin idéal pour retrouver des jambes légères. Cette technique douce stimule la circulation et réduit efficacement la rétention d'eau.</ImgCard>
-                    <ImgCard onSelect={toggleDrawer(true, 2, false, 'madero')} img="/maderotherapy.png" title="Madérothérapie (45 min) — 100 €">Une technique sculptante et naturelle pour le remodelage de la silhouette et la tonicité de la peau, tout en vous procurant un bien-être global.</ImgCard>
+                    <ImgCard onSelect={toggleDrawer(true, 2, false, 'madero')} img="/realimg1.jpeg" title="Madérothérapie (45 min) — 100 €">Une technique sculptante et naturelle pour le remodelage de la silhouette et la tonicité de la peau, tout en vous procurant un bien-être global.</ImgCard>
 
 
                 </div>
@@ -90,7 +90,7 @@ export default function Soins({ toggleDrawer }) {
                     </div>
 
                 </div>
-                <div className='border-amber-300 gap-5 rounded-md flex flex-row justify-center h-20 w-full '>
+                <div className='border-amber-300 gap-5 rounded-md flex flex-row px-20 justify-center  mx-auto h-20 p-2 md:p-0 w-full '>
                     <div className="h-full aspect-square 0 p-3">
                         <PaypalLogoIcon  className="w-full text-blue-600 h-full" />
                     </div>

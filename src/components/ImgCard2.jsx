@@ -31,19 +31,16 @@ export default function ActivityCard({
             <CardActionArea onClick={() => onSelect(type)}
             
             sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
-                <CardMedia
-                    component="img"
-                    height="180" // Slightly taller to showcase the activity imagery better
-                    image={img}
-                    alt={title}
-                />
+                 {img && <div className="bg-white h-50 w-100">
+                    <img className="w-full object-cover h-full" src={img}></img>
+                    </div>}
                 <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                     {/* Title */}
                     <Typography
                         variant="h5"
                         component="h2"
                         sx={{
-                            fontFamily: 'serif',
+                            fontFamily: 'sans',
                             fontWeight: 700,
                             color: '#064e3b', // Deep Emerald
                             letterSpacing: '0.02em',
@@ -58,7 +55,7 @@ export default function ActivityCard({
                         <Typography
                             variant="body2"
                             sx={{
-                                fontFamily: 'serif',
+                                fontFamily: 'sans',
                                 fontStyle: 'italic',
                                 color: '#064e3b',
                                 opacity: 0.85,
@@ -92,12 +89,12 @@ export default function ActivityCard({
                                         fontSize: '1.2rem',
                                         lineHeight: '1.2rem'
                                     }}>
-                                        •
+                                        {">"}
                                     </Typography>
                                     
                                     {/* Activity Text */}
                                     <Typography sx={{
-                                        fontFamily: 'serif',
+                                        fontFamily: 'sans',
                                         color: '#022c22', // Emerald-950
                                         lineHeight: 1.4,
                                         fontSize: '0.95rem'

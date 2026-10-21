@@ -35,7 +35,7 @@ export default function Contact() {
         e.target.reset()
     };
     return (
-        <section className="bg-linear-to-b from-amber-50  to-amber-50 py-3 md:py-7 font-serif overflow-hidden">
+        <section className="bg-linear-to-t from-amber-50  to-white py-3 md:py-7 font-serif overflow-hidden">
             <img
                 src="/emblem.png"
                 alt=""

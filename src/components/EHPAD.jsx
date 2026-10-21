@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import { CalendarIcon, DeleteIcon, SendIcon } from "lucide-react";
 export default function Soins({toggleDrawer}) {
     return (
-        <section className="relative px-6 lg:px-8 bg-amber-50 flex   pt-3 pb-0 md:pt-5 md:pb-5  items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8 bg-white flex   pt-3 pb-0 md:pt-5 md:pb-5  items-center  overflow-hidden">
 
             {/* The Top Separator Emblem */}
             <img
@@ -76,7 +76,7 @@ export default function Soins({toggleDrawer}) {
                     {/* Conteneur de la carte */}
                     <div className="rounded-[15px] overflow-hidden bg-white">
                         <ImgCard
-                            img="/tarifs-degressifs.png"
+                            
                             title="Tarifs Dégressifs"
                              onSelect={toggleDrawer(true, 1, true)}
                         >

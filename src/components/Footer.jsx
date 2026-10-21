@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-50 border-t border-stone-200 py-4 md:py-6">
+    <footer className="bg-amber-50 border-t border-stone-200 py-4 md:py-6">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
         
         {/* Left: Brand Name */}

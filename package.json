@@ -21,6 +21,7 @@
     "@react-three/fiber": "^9.6.1",
     "@stripe/react-stripe-js": "^6.6.0",
     "@stripe/stripe-js": "^9.8.0",
+    "@tailwindcss/vite": "^4.3.3",
     "@tsparticles/engine": "^4.2.1",
     "@tsparticles/react": "^4.2.1",
     "@tsparticles/slim": "^4.2.1",
@@ -81,7 +82,7 @@
     "globals": "^17.6.0",
     "postcss": "^8.5.15",
     "react-error-overlay": "^6.0.9",
-    "tailwindcss": "^4.3.1",
+    "tailwindcss": "^4.3.3",
     "vite": "^8.0.12"
   }
 }

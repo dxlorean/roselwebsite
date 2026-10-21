@@ -9,18 +9,18 @@ export default function Hero({ toggleDrawer }) {
 
 
     return (
-        <section className="relative px-6 lg:px-8  bg-amber-50 flex   pt-3 pb-0 md:pt-10   items-center  overflow-hidden">
+        <section className="relative px-6 lg:px-8  bg-white flex   pt-3 pb-0 md:pt-10   items-center  overflow-hidden">
 
 
 
 
 
-            <div id="home" className="relative w-full  max-w-7xl mx-auto flex flex-col z-10 px-5 pt-20 pb-20  lg:px-8">
+            <div id="home" className="relative w-full  h-auto flex flex-col z-10 pt-20 pb-20  ">
 
-                <div className="flex justify-center pt-5">
-                    <div className="w-full aspect-[4/3] lg:aspect-[6/3]  rounded-2xl overflow-hidden   border-white">
+                <div className="flex justify-center ">
+                    <div className="   w-full max-h-200  overflow-hidden   border-white">
 
-                        <video id="vid" className="object-cover h-full w-full rounded-lg" muted autoPlay loop>
+                        <video id="vid" className="object-cover   autoPlay loop  h-full w-full">
                             <source src="videoshowcase.mp4" type="video/mp4"></source>
                             Your browser does not support the video tag.
                         </video>
@@ -29,12 +29,12 @@ export default function Hero({ toggleDrawer }) {
                 </div>
 
 
-                <p className="pt-5 pb-5 md:pb-7 md:pt-7 motion-preset-slide-up motion-duration-2000 motion-delay-300 text-lg md:text-xl text-emerald-950/80 leading-relaxed max-w-7xl mx-auto text-center font-serif">
+                <p className="pt-5 pb-5 md:pb-7 md:pt-7 motion-preset-slide-up motion-duration-2000 motion-delay-300 text-lg md:text-3xl text-emerald-950/80 leading-relaxed max-w-7xl mx-auto text-center font-serif">
                     <span className="italic">Rosel</span> accompagne les particuliers, les seniors et les professionnels dans une démarche
                     globale de bien-être, de vitalité et d'amélioration de la qualité de vie.
 
                 </p>
-                <p className="pt-5 pb-5 md:pb-7 md:pt-7 motion-preset-slide-up motion-duration-2000 motion-delay-300 text-lg md:text-xl text-emerald-950/80 leading-relaxed max-w-7xl mx-auto text-center font-serif">
+                <p className="pt-5 pb-5 md:pb-7 md:pt-7 motion-preset-slide-up motion-duration-2000 motion-delay-300 text-lg md:text-3xl text-emerald-950/80 leading-relaxed max-w-7xl mx-auto text-center font-serif">
                     Grâce à une expertise certifiée dans les domaines de la santé et de l'animation — en tant que
                     {" "}
                     <span className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent font-bold drop-shadow-sm">

@@ -19,20 +19,16 @@ export default function ActionAreaCard({ type="null", children, title = "Card", 
             }
         }}>
             <CardActionArea onClick={() => onSelect(type)}>
-                {img && <CardMedia
-                    component="img"
-                    height="140"
-                    image={img}
-                    alt=""
-                    
-                />}
+                {img && <div className="bg-white aspect-video w-full">
+                    <img className="w-full object-cover h-full" src={img}></img>
+                    </div>}
                 <CardContent>
                     <Typography
                         gutterBottom
                         variant="h5"
                         component="h2"
                         sx={{
-                            fontFamily: 'serif',
+                            fontFamily: 'sans',
                             fontWeight: 700,
                             color: '#064e3b', // Deep Emerald
                             letterSpacing: '0.02em'
@@ -45,7 +41,7 @@ export default function ActionAreaCard({ type="null", children, title = "Card", 
                     <Typography
                         variant="body1"
                         sx={{
-                            fontFamily: 'serif',
+                            fontFamily: 'sans',
                             fontStyle: 'italic',
                             lineHeight: 1.6
                         }}

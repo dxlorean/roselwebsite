@@ -111,7 +111,7 @@ function App() {
   };
 
 
-  return (<div className="min-h-screen bg-amber-50 text-black overflow-hidden" >
+  return (<div className="min-h-screen bg-white text-black overflow-hidden" >
 
     <Navbar toggleCart={toggleCartSimple} />
 
@@ -128,7 +128,6 @@ function App() {
           <Soins toggleDrawer={toggleDrawer} />
           <Entreprise toggleDrawer={toggleDrawer} />
           <EHPAD toggleDrawer={toggleDrawer} />
-          <Features />
           <Contact />
         </div>
       } />
